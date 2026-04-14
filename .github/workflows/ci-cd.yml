@@ -1,0 +1,31 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup runtime
+        run: echo "Project type: Python"
+      - name: Install dependencies
+        run: echo "Build tool: pip"
+      - name: Run tests
+        run: echo "Run your project tests here"
+      - name: Static analysis
+        run: echo "Configured tools: none configured"
+      - name: Security scanning
+        run: echo "Configured tools: none configured"
+
+  deploy:
+    needs: [build-test]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy
+        run: echo "Deploy to: Development"
