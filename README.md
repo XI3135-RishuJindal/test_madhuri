@@ -9,6 +9,7 @@ These files describe service behavior and implementation tasks — they are **no
 - `openspec/changes/user-management-service/specs/spec.md`
 - `openspec/changes/user-management-service/design.md`
 - `openspec/changes/user-management-service/tasks.md`
+- `specs/user-management-service/spec.md`
 
 ## Next steps
 - Review `proposal.md`, `specs/spec.md`, `design.md`, and `tasks.md` under `openspec/changes/`.
