@@ -1,0 +1,25 @@
+# Implementation Tasks – User Management Service
+
+- [ ] Define User data model (id, name, email, createdAt).
+- [ ] Implement UserDTO, VerificationRequest, VerificationResponse, ErrorResponse, Pagination models.
+- [ ] Create UserRepository for PostgreSQL integration.
+- [ ] Implement UserManagementService with createUser, verifyUser, updateUser, deleteUser logic.
+- [ ] Implement UserVerificationService for sending/validating verification codes.
+- [ ] Develop UserController with REST endpoints:
+  - [ ] GET /api/v1/users
+  - [ ] GET /api/v1/users/{id}
+  - [ ] POST /api/v1/users
+  - [ ] PUT /api/v1/users/{id}
+  - [ ] DELETE /api/v1/users/{id}
+  - [ ] POST /api/v1/auth/login
+  - [ ] GET /health
+- [ ] Integrate OAuth2/JWT authentication for all endpoints.
+- [ ] Implement Redis integration for session/token caching.
+- [ ] Integrate with File Storage Service (if required for user files).
+- [ ] Implement standardized error handling and validation.
+- [ ] Add logging and basic metrics for all endpoints.
+- [ ] Add unit and integration tests for all components.
+- [ ] Implement rate limiting and brute-force protection (TODO: confirm requirements).
+- [ ] Publish UserCreatedEvent to Kafka on registration (TODO: confirm requirement).
+- [ ] Document API endpoints and error responses.
+- [ ] Clarify file storage and event publishing requirements with domain experts.
